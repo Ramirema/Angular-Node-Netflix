@@ -1,24 +1,17 @@
 {
-  "name": "netflix",
+  "name": "server",
   "version": "1.0.0",
-  "description": "exercice angular-node netflix",
-  "main": "server.js",
+  "description": "",
+  "main": "bootstrap.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ramirema/Angular-Node-Netflix.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ramirema/Angular-Node-Netflix/issues"
-  },
-  "homepage": "https://github.com/Ramirema/Angular-Node-Netflix#readme",
   "dependencies": {
-    "hapi": "^17.2.0",
-    "inert": "^5.1.0",
-    "mongoose": "^5.0.4"
+    "glob-promise": "^3.3.0",
+    "glue": "^5.0.0",
+    "hapi-moongoose-models-plugin": "^0.0.3",
+    "hapi-routes-plugin": "^0.0.2"
   }
 }
