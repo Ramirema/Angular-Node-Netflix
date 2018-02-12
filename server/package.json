@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Ramirema/Angular-Node-Netflix/issues"
   },
-  "homepage": "https://github.com/Ramirema/Angular-Node-Netflix#readme"
+  "homepage": "https://github.com/Ramirema/Angular-Node-Netflix#readme",
+  "dependencies": {
+    "hapi": "^17.2.0",
+    "inert": "^5.1.0",
+    "mongoose": "^5.0.4"
+  }
 }
