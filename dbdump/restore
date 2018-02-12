@@ -1,0 +1,1 @@
+mongorestore -v --host localhost:27017 --archive=/home/gilles/www/swportal/dbdump/archive  --objcheck --drop
