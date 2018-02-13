@@ -7,8 +7,8 @@ export class MovieService {
   constructor(public http: HttpClient) {}
   getAll() {
     return this.http.get(BASE_URL).toPromise();
-  };
-  getMoviesCount(){
+  }
+  getMoviesCount() {
     return this.http.get(`${BASE_URL}/count`).toPromise();
   }
 }

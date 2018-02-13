@@ -7,17 +7,17 @@ import { MovieService } from '../shared/movie.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  count:number
+  count: number;
   constructor(public movieService: MovieService) {
-    this.count=0;
+    this.count = 0;
   }
 
   ngOnInit() {
     this.getCountFromServer();
   }
-  getCountFromServer(){
+  getCountFromServer() {
     this.movieService
-    .getMoviesCount()
-    .then(result =>(this.count = result as number))
+      .getMoviesCount()
+      .then(result => (this.count = result as number));
   }
 }
