@@ -3,7 +3,8 @@ const routes = require('hapi-routes-plugin');
 const models = require('hapi-moongoose-models-plugin');
 const manifest = {
   server: {
-    port: 9000
+    port: 9000,
+    routes: {cors : {origin: ['*']} }
   },
   register: {
     plugins: [{ plugin: models, options: { database: 'portal' } }, routes]
