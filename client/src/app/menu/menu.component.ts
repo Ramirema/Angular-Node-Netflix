@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { MovieService } from '../shared/movie.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,13 +7,17 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-
-  constructor( public http: HttpClient) { }
-
-  ngOnInit() {
-    this.http.get('http://localhost:9000/api/movies').toPromise()
-    .then(result => console.log(result))
-    .catch(err => console.log(err));
+  count:number
+  constructor(public movieService: MovieService) {
+    this.count=0;
   }
 
+  ngOnInit() {
+    this.getCountFromServer();
+  }
+  getCountFromServer(){
+    this.movieService
+    .getMoviesCount()
+    .then(result =>(this.count = result as number))
+  }
 }

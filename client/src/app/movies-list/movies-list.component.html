@@ -1,0 +1,18 @@
+<div class="movie-list">
+  <div class="row" *ngFor="let chunk of visualMovies">
+    <div class="col s12 m3" *ngFor="let movie of chunk">
+      <div class="card large">
+        <div class="card-image">
+          <img src="https://image.tmdb.org/t/p//w500/{{movie.poster_path}}">
+          <span class="card-title">{{movie.title}}</span>
+        </div>
+        <div class="card-content">
+          <p>{{movie.overview}}</p>
+        </div>
+        <div class="card-action">
+          <a href="#">details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
